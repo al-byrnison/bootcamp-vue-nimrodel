@@ -29,10 +29,10 @@
               <a href="#">sobre nosotros</a>
             </li>
             <li>
-              <a href="#"> comuniquemonos</a>
+              <a href="#contact"> comuniquemonos</a>
             </li>
             <li>
-              <a href="#"> reserva</a>
+              <a href="#reservation"> reserva</a>
             </li>
           </ul>
         </div>
@@ -41,43 +41,186 @@
     <main>
       <h1>Nimrodel Pub Restaurant</h1>
       <section>
-        <h2>destacados de la semana</h2>
-        <article class="cards__container">
-          <div class="card">
-            <img
-              src="./assets/img/bebidas.jpg"
-              alt="imagen de gaseosas"
-              width="100%"
-            />
-            <h3 class="card__title">gaseosas</h3>
-            <p class="card__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              delectus quod corrupti omnis velit possimus.
-            </p>
+        <article id="week-features">
+          <h2 class="sub__title">destacados de la semana</h2>
+          <div class="cards__container">
+            <div class="card">
+              <img
+                src="./assets/img/bebidas.jpg"
+                alt="imagen de gaseosas"
+                width="100%"
+              />
+              <h3 class="card__title">gaseosas</h3>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                delectus quod corrupti omnis velit possimus.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/img/tablas.jpg"
+                alt="imagen de tablas"
+                width="100%"
+              />
+              <h3 class="card__title">tablas</h3>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                delectus quod corrupti omnis velit possimus.
+              </p>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/img/shop.jpeg"
+                alt="imagen de shop cerveza"
+                width="100%"
+              />
+              <h3 class="card__title">shop cerveza</h3>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                delectus quod corrupti omnis velit possimus.
+              </p>
+            </div>
           </div>
-          <div class="card">
-            <img
-              src="./assets/img/tablas.jpg"
-              alt="imagen de tablas"
-              width="100%"
-            />
-            <h3 class="card__title">tablas</h3>
-            <p class="card__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              delectus quod corrupti omnis velit possimus.
-            </p>
+        </article>
+        <article id="contact">
+          <h2 class="sub__title">Comuniquemonos</h2>
+          <div class="form__container">
+            <form action="" id="form-contact">
+              <div class="form__item">
+                <label for="username">Nombre</label>
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Ingrese su nombre"
+                  pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="mail">Correo</label>
+                <input
+                  type="email"
+                  name="mail"
+                  id=""
+                  placeholder="Ingrese su correo"
+                  pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="mobile">Telefono</label>
+                <span class="tel__prefix">
+                  +56
+                  <input
+                    type="tel"
+                    name="mobile"
+                    id=""
+                    placeholder="9 12345678"
+                    pattern="[/\A(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}\z/]"
+                    autocomplete="off"
+                    required
+                  />
+                </span>
+              </div>
+              <div class="form__item">
+                <label for="subject">Motivo</label>
+                <input
+                  type="text"
+                  name="subject"
+                  id=""
+                  placeholder="ingrese el motivo"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="textarea__container">
+                <textarea rows="4" cols=""> </textarea>
+              </div>
+              <div class="button__container">
+                <button type="submit" id="btn-send">Enviar</button>
+              </div>
+            </form>
           </div>
-          <div class="card">
-            <img
-              src="./assets/img/shop.jpeg"
-              alt="imagen de shop cerveza"
-              width="100%"
-            />
-            <h3 class="card__title">shop cerveza</h3>
-            <p class="card__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              delectus quod corrupti omnis velit possimus.
-            </p>
+        </article>
+        <article id="reservation">
+          <h2 class="sub__title">Reserva</h2>
+          <div class="form__container">
+            <form action="" id="form__reservation">
+              <div class="form__item">
+                <label for=""></label>
+              </div>
+              <div class="form__item">
+                <label for="reservation-name">Nombre</label>
+                <input
+                  type="text"
+                  name="reservation-name"
+                  placeholder="Nombre de la reserva"
+                  pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="reservation-mail">Correo</label>
+                <input
+                  type="email"
+                  name="reservation-mail"
+                  placeholder="ingrese correo de contacto"
+                  pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="reservation-mobile">telefono</label>
+                <span class="tel__prefix">
+                  +56
+                  <input
+                    type="tel"
+                    name="reservation-mobile"
+                    id=""
+                    placeholder="9 12345678"
+                    pattern="[/\A(\+?56)?(\s?)(0?9)(\s?)[9876543]\d{7}\z/]"
+                    autocomplete="off"
+                    required
+                  />
+                </span>
+              </div>
+              <div class="form__item">
+                <label for="reservation-date">Fecha</label>
+                <input
+                  type="date"
+                  name="reservation-date"
+                  id="reservation-date"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="reservation-time">Hora</label>
+                <input
+                  type="time"
+                  name="reservation-time"
+                  id="reservation-time"
+                  min="15:00"
+                  max="00:00"
+                  required
+                />
+              </div>
+              <div class="form__item">
+                <label for="diners">Cantidad de Asistentes</label>
+                <input
+                  type="number"
+                  name="diners"
+                  min="1"
+                  max="20"
+                  placeholder="Ingrese cantidad de asistentes"
+                />
+              </div>
+              <div class="button__container">
+                <button type="submit" id="btn-reservation">Reservar</button>
+              </div>
+            </form>
           </div>
         </article>
       </section>
@@ -88,5 +231,6 @@
         <i class="fa-regular fa-registered"></i>
       </span>
     </footer>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
