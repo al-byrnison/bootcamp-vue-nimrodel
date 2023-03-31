@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;300&family=Dosis:wght@200;300;400;500&family=Montserrat:wght@100;300;400&display=swap');
+:root {
+  --hero: 'Dosis', sans-serif;
+  --title: 'Montserrat', sans-serif;
+  --text: 'Asap Condensed', sans-serif;
+  --wThin: 100;
+  --wXlight: 200;
+  --wLigth: 300;
+  --wRegular: 400;
+  --wMedium: 500;
+  --borderLogo: #fcbde1;
+  --beforeLogo: #fc446c;
+  --shadowLogo: #fc041c;
+  --white: #fdfdfd;
+  --black: #111111;
+  --blue: #1400ff;
+}
 * {
   padding: 0;
   margin: 0;
@@ -7,10 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: sans-serif;
+  height: fit-content;
+  padding: 0;
 }
-h1,
-h2 {
+h1 {
   margin: 1rem;
 }
 a {
@@ -19,6 +36,9 @@ a {
 }
 li {
   list-style: none;
+}
+label {
+  font-family: var(--text);
 }
 input,
 textarea {
@@ -29,6 +49,7 @@ textarea,
 button {
   border-radius: 0.3rem;
   border: none;
+  font-family: var(--title);
 }
 input:focus,
 textarea:focus {
@@ -37,22 +58,42 @@ textarea:focus {
 input:focus::placeholder {
   color: transparent;
 }
+.highlight__shadow {
+  text-shadow: 1px 1px 2px var(--borderLogo), 0 0 1.5rem var(--beforeLogo),
+    0 0 0.3rem var(--shadowLogo);
+}
+header {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 main {
-  padding: 1rem;
+  margin: 0;
+  padding: 0;
+}
+#hero {
   margin-top: 7rem;
+}
+section {
+  background-color: var(--black);
+  height: 100%;
+  padding-top: 2rem;
 }
 
 nav {
   height: 7rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(1rem);
+  background-color: var(--black);
   top: 0;
+  position: fixed;
   z-index: 20;
   width: 100%;
+}
+.nav__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
 }
 .logo img {
   width: 6rem;
@@ -70,30 +111,110 @@ nav {
   padding: 3rem 0 1rem;
 }
 .menu ul li a {
-  color: #222222;
+  color: var(--white);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: var(--wRegular);
   transition: 0.3s ease-out;
   padding-bottom: 0.3rem;
+  font-family: var(--title);
+}
+#feature,
+#hero,
+#contact,
+#reservation {
+  scroll-margin-top: 7rem;
+  height: 100%;
 }
 .menu ul li a:hover {
-  border-bottom: 0.2rem solid #d002ae;
+  text-shadow: 1px 1px 2px var(--borderLogo), 0 0 1.5rem var(--beforeLogo),
+    0 0 0.3rem var(--shadowLogo);
 }
-
-.sub__title {
-  padding: 1rem 2rem;
-  text-transform: capitalize;
+.menu ul li a span {
+  margin-right: 0.5rem;
+  visibility: hidden;
+  transition: 0.2s ease-out;
 }
-.cards__container {
+.menu ul li a:hover span {
+  visibility: visible;
+}
+.hero__content {
+  height: 14rem;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-image: url('../img/fondo.jpg');
+  background-size: contain;
+  background-repeat: round;
+  background-position: top;
+  padding: 1rem;
+}
+.filter {
+  min-width: fit-content;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(1rem);
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+}
+.filter span {
+  margin: 1rem 0;
+  font-family: var(--hero);
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  text-shadow: 1px 1px 2px var(--borderLogo), 0 0 1rem var(--beforeLogo),
+    0 0 1rem var(--shadowLogo);
+}
+
+.filter span::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  top: 0.2rem;
+  left: 0.2rem;
+  color: var(--borderLogo);
+}
+.filter p {
+  text-align: center;
+  width: fit-content;
+  font-family: var(--hero);
+  font-weight: var(--wRegular);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  color: var(--white);
+  text-shadow: 1px 1px 2px var(--borderLogo), 0 0 1.5rem var(--beforeLogo),
+    0 0 0.3rem var(--shadowLogo);
+}
+.filter p::before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: var(--borderLogo);
+}
+.cards__container {
+  padding: 2rem;
+  display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+}
+.sub__title {
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+  font-family: var(--title);
+  padding: 1rem;
 }
 .card {
   width: 30vw;
   min-width: 20rem;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0.5rem 2rem 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -120,15 +241,16 @@ nav {
   font-family: var(--text);
   text-align: justify;
 }
-#week__features,
-#contact,
-#reservation {
-  scroll-margin-top: 7rem;
+.wrapper__container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
 }
 #contact,
 #reservation {
-  background-color: #cccccc;
-  width: fit-content;
+  min-width: fit-content;
   padding-bottom: 1rem;
   border-radius: 1rem;
 }
@@ -144,8 +266,11 @@ nav {
   flex-direction: column;
   gap: 1rem;
   width: 25rem;
-  padding: 1rem;
-  background-color: #222222;
+  padding: 1rem 2rem;
+  background-color: #070707;
+  border-radius: 0.5rem;
+  border: 0.2rem solid;
+  border-color: var(--beforeLogo);
 }
 .form__container textarea {
   width: 100%;
@@ -168,6 +293,8 @@ nav {
   background-color: #ffffff;
   width: 70%;
   padding: 0.5rem;
+  color: var(--black);
+  font-family: var(--title);
 }
 .form__item span input {
   border: none;
@@ -190,18 +317,85 @@ nav {
 }
 .button__container button {
   color: #efefef;
-  background-color: #19a4a4;
+  background: linear-gradient(var(--blue), var(--beforeLogo));
   padding: 0.5rem;
   width: 100%;
   font-size: 1.2rem;
 }
+.line__gradient {
+  width: 100%;
+  height: 0.5rem;
+  background-image: linear-gradient(
+    90deg,
+    var(--beforeLogo),
+    var(--blue),
+    var(--shadowLogo),
+    var(--blue)
+  );
+  background-size: 300% 100%;
+  animation: animateBg 7s linear infinite;
+}
+.reverse__gradient {
+  transform: rotate(180deg);
+}
+.blob {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background: linear-gradient(180deg, #fc041c26 31.77%, var(--beforeLogo) 100%);
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+  animation: move 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
 
 footer {
   padding: 1rem;
+  min-height: 10rem;
+  background: url('../img/fondo.jpg'), #010204;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer {
+  color: var(--white);
   display: flex;
   justify-content: center;
-  align-content: center;
-  height: 4rem;
-  background-color: #222222;
-  color: #d002ae;
+  align-items: flex-end;
+  text-transform: capitalize;
+  font-family: var(--hero);
+  vertical-align: bottom;
+  padding-top: 3rem;
+}
+
+@keyframes animateBg {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-webkit-keyframes move {
+  from {
+    transform: translate(-6.25rem, -3.125rem) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(31.25rem, 6.25rem) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(-100px, -50px) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(500px, 100px) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
 }
