@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <title>NIMRODEL Restaurant y Pub</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
@@ -20,6 +20,11 @@
         <div class="nav__content">
           <div class="logo">
             <a href="#"><img src="./assets/img/n.png" alt="" width="100%" /></a>
+          </div>
+          <div class="menu__burger">
+            <button type="button" id="toggle-button">
+              <i id="icon-toggle" class="fa-solid fa-bars"></i>
+            </button>
           </div>
           <div class="menu">
             <ul>
@@ -54,10 +59,8 @@
       </nav>
       <div id="hero" class="hero__content">
         <div class="filter">
-          <p class="highlight__shadow" data-text="pub restaurant">
-            pub restaurant
-          </p>
-          <span class="highlight__shadow" data-text="nimroDel">nimroDel</span>
+          <p class="text__shadow" data-text="pub restaurant">pub restaurant</p>
+          <span class="text__shadow" data-text="nimroDel">nimroDel</span>
         </div>
       </div>
       <div class="line__gradient"></div>
@@ -86,7 +89,7 @@
                 alt="imagen de tablas"
                 width="100%"
               />
-              <h3 class="card__title">tablas</h3>
+              <h3 class="card__title"><i class="fa-solid fa-burger"></i> tablas</h3>
               <p class="card__description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
                 delectus quod corrupti omnis velit possimus.
@@ -106,6 +109,7 @@
             </div>
           </div>
         </article>
+        <!-- 
         <div class="wrapper__container">
           <article id="contact" class="card">
             <h2 class="sub__title">Comuniquemonos</h2>
@@ -250,10 +254,10 @@
             </div>
           </article>
         </div>
-      </section>
+      </section> -->
     </main>
-    <div class="line__gradient"></div>
     <footer>
+      <div class="line__gradient"></div>
       <div class="footer highlight__shadow">
         <span
           >todos los derechos reservados

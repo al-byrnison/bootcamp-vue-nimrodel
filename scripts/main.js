@@ -1,3 +1,23 @@
+const btnBurger = document.querySelector('#toggle-button');
+const menu = document.querySelector('.menu');
+const iconMenu = document.querySelector('#icon-toggle');
+let toggle = false;
+
+const open = () => {
+  menu.classList.toggle('active');
+  iconMenu.classList.remove('fa-bars');
+  iconMenu.classList.add('fa-xmark');
+};
+const close = () => {
+  menu.classList.remove('active');
+  iconMenu.classList.remove('fa-xmark');
+  iconMenu.classList.add('fa-bars');
+};
+btnBurger.addEventListener('click', () => {
+  toggle = !toggle;
+  toggle ? open() : close();
+});
+
 const reservationDate = document.getElementById('reservation-date');
 const reservationHour = document.getElementById('reservation-time');
 
