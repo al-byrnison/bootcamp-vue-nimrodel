@@ -6,12 +6,27 @@ btnBurger.addEventListener('click', function () {
   iconToggle.classList.toggle('fa-drumstick-bite');
 });
 
+//FORM SHOW
+const contactLink = document.getElementById('contact-link');
+const contactForm = document.getElementById('contact');
+const reservationsLink = document.getElementById('reservations-link');
+const reservationsForm = document.getElementById('reservations');
+
+contactLink.addEventListener('click', function () {
+  contactForm.classList.add('d-lg-block');
+});
+reservationsLink.addEventListener('click', function () {
+  reservationsForm.classList.add('d-lg-block');
+});
+
 //FORM DATE-TIME ACTIONS
 const reservationDate = document.getElementById('reservation-date');
 const reservationHour = document.getElementById('reservation-time');
 const date = new Date();
+const tomorrow = new Date(date.getTime() + 1 * 24 * 60 * 60 * 1000);
 const threeWeeksLater = new Date(date.getTime() + 21 * 24 * 60 * 60 * 1000);
-reservationDate.min = reservationDate.value = date.toISOString().split('T')[0];
+reservationDate.ariaPlaceholder = date.toISOString().split('T')[0];
+reservationDate.min = tomorrow.toISOString().split('T')[0];
 reservationDate.max = threeWeeksLater.toISOString().split('T')[0];
 reservationHour.value = date.toLocaleTimeString('es-CL', {
   timeStyle: 'short',
@@ -27,6 +42,7 @@ reservationHour.value = date.toLocaleTimeString('es-CL', {
       'submit',
       (event) => {
         if (!form.checkValidity()) {
+          alert('Debe completar los campos');
           event.preventDefault();
           event.stopPropagation();
         }
