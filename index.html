@@ -1,504 +1,343 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>NIMRODEL Restaurant y Pub</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-  </head>
-  <bod>
+
+<head>
+  <title>NIMRODEL Restaurant y Pub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<bod>
   <!-- <body class="bg__dark mw-100"> -->
-    <header>
-      <nav class="navbar fixed-top navbar-expand-lg bg__dark navbar-dark min-vw-100 d-flex">
-        <div class="container-fluid">
-          <div class="row w-100">
-            <div class="col ">
-              <a class="justify-content-start " href="#">
-                <img
-                  src="/assets/img/n.png"
-                  alt="Logo"
-                  width="80"
-                  height="80"
-                />
-              </a>
-            </div>
-            <div class="col text-end align-self-center">
-              <button
-                class="btn navbar-toggler border border-3 rounded-circle p-2 "
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarHorizontal"
-                id="toggle-burger"
-              >
-                <i id="icon-toggle" class="fa-solid fa-burger display-6"></i>
-              </button>
-            </div>
-            <div
-              class="collapse collapse-horizontal navbar-collapse bg-lg-dark bg__menu col-lg-9 col px-0"
-              id="navbarHorizontal"
-            >
-            <div
-              class="line__gradient reverse__gradient min-vw-100 position-absolute z-3 d-lg-none "
-            ></div>
-              <ul id="menu-ul" class="navbar-nav text-uppercase align-items-lg-end text-lg-center">
-                <li class="nav-item p-lg-2 p-3">
-                  <a
-                    class="nav-link text-white fw-light d-flex align-items-center"
-                    href="#carousel"
-                    ><i
-                      class="fa-solid fa-beer-mug-empty me-4 me-lg-2 visible__icon"
-                    ></i>
-                    Nuestros productos</a
-                  >
-                </li>
-                <li class="nav-item p-lg-2 p-3">
-                  <a
-                    class="nav-link text-white fw-light d-flex align-items-center"
-                    href="#"
-                    ><i
-                      class="fa-solid fa-martini-glass-citrus me-4 me-lg-2 visible__icon"
-                    ></i>
-                    Sobre Nosotros</a
-                  >
-                </li>
-                <li class="nav-item p-lg-2 p-3">
-                  <a
-                    class="nav-link text-white fw-light d-flex align-items-center"
-                    href="#contact"
-                    id="contact-link"
-                  >
-                    <i class="fa-solid fa-comments me-4 me-lg-2 visible__icon"></i>
-                    Comuniquemonos</a
-                  >
-                </li>
-                <li class="nav-item p-lg-2 p-3">
-                  <a
-                    class="nav-link text-white fw-light d-flex align-items-center"
-                    href="#reservations"
-                    id="reservations-link"
-                  >
-                    <i
-                      class="fa-solid fa-champagne-glasses me-4 me-lg-2 visible__icon"
-                    ></i>
-                    Reserva</a
-                  >
-                </li>
-              </ul>
-            </div>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg bg__dark navbar-dark min-vw-100 d-flex">
+      <div class="container-fluid">
+        <div class="row w-100">
+          <div class="col ">
+            <a class="justify-content-start " href="#">
+              <img src="/assets/img/n.png" alt="Logo" width="80" height="80" />
+            </a>
           </div>
-        </div>
-        <div
-          class="line__gradient reverse__gradient min-vw-100 position-absolute z-3 top-100"
-        ></div>
-      </nav>
-       <div class="bg__hero">
-        <div class="filter">
-          <h6 class="text-center text-uppercase filter__text text__shadow">
-            Pub Restaurant
-          </h6>
-          <h1
-            class="text-center display-2 filter__text text__shadow"
-            data-text="NIMRODEL"
-          >
-            NIMRODEL
-          </h1>
+          <div class="col text-end align-self-center">
+            <button class="btn navbar-toggler border border-3 rounded-circle p-2 " data-bs-toggle="collapse"
+              data-bs-target="#navbarHorizontal" id="toggle-burger">
+              <i id="icon-toggle" class="fa-solid fa-burger display-6"></i>
+            </button>
+          </div>
+          <div class="collapse collapse-horizontal navbar-collapse bg-lg-dark bg__menu col-lg-9 col px-0"
+            id="navbarHorizontal">
+            <div class="line__gradient reverse__gradient min-vw-100 position-absolute z-3 d-lg-none "></div>
+            <ul id="menu-ul" class="navbar-nav text-uppercase align-items-lg-end text-lg-center">
+              <li class="nav-item p-lg-2 p-3">
+                <a class="nav-link text-white fw-light d-flex align-items-center" href="#carousel"><i
+                    class="fa-solid fa-beer-mug-empty me-4 me-lg-2 visible__icon"></i>
+                  Nuestros productos</a>
+              </li>
+              <li class="nav-item p-lg-2 p-3">
+                <a class="nav-link text-white fw-light d-flex align-items-center" href="#"><i
+                    class="fa-solid fa-martini-glass-citrus me-4 me-lg-2 visible__icon"></i>
+                  Sobre Nosotros</a>
+              </li>
+              <li class="nav-item p-lg-2 p-3">
+                <a class="nav-link text-white fw-light d-flex align-items-center" href="#contact" id="contact-link">
+                  <i class="fa-solid fa-comments me-4 me-lg-2 visible__icon"></i>
+                  Comuniquémonos</a>
+              </li>
+              <li class="nav-item p-lg-2 p-3">
+                <a class="nav-link text-white fw-light d-flex align-items-center" href="#reservations"
+                  id="reservations-link">
+                  <i class="fa-solid fa-champagne-glasses me-4 me-lg-2 visible__icon"></i>
+                  Reserva</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="line__gradient"></div> 
-    </header>
-     <main class="bg__dark">
-      <article class=" px-lg-5 px-xs-3 px-1 pb-5">
-        <section class="container-sm">
-          <h2 class="text-white text-center py-5">Destacados de la semana</h2>
-          <div class="blob__container">
-            <div class="blob"></div>
-            </div>
-          <div class="row row-cols-1 row-cols-lg-3 text-center">
-            <div class="col p-3 bg-transparent rounded">
-              <div class="card h-100 bg__card text-white border-0 p-3">
-                <img
-                  src="./assets/img/bebidas.jpg"
-                  class="card-img-top object-fit-cover rounded"
-                  alt="Imagen de gaseosas"
-                  height="250"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-uppercase">Gaseosas</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat delectus quod corrupti omnis velit possimus.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col p-3 bg-transparent rounded">
-              <div class="card h-100 bg__card text-white border-0 p-3">
-                <img
-                  src="./assets/img/tablas.jpg"
-                  class="card-img-top object-fit-cover rounded"
-                  alt="Imagen de comida"
-                  height="250"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-uppercase">Tablas</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat delectus quod corrupti omnis velit possimus.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col p-3 bg-transparent rounded">
-              <div class="card h-100 bg__card text-white border-0 p-3">
-                <img
-                  src="./assets/img/shop.jpeg"
-                  class="card-img-top object-fit-cover"
-                  alt="Imagen de cervezas"
-                  height="250"
-                />
-                <div class="card-body">
-                  <h5 class="card-title text-uppercase">Shop Cerveza</h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugiat delectus quod corrupti omnis velit possimus.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="contact" class="container py-5 my-3 d-none w-75">
-          <div class="d-flex flex-column align-items-center bg__card py-4 rounded-4 container-xl">
-            <h2 class="text-white text-center pb-3">Comuniquemonos</h2>
-            <div class=" d-flex justify-content-center">
-              <form
-                class="row g-3 needs-validation justify-content-center bg__form py-3 rounded w-75"
-                novalidate
-                id="form-contact"
-              >
-                <div class="row my-3">
-                  <label
-                    for="contact-name"
-                    class="col-form-label col-sm-2 text-white"
-                    >Nombre</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="contact-name"
-                      placeholder="Ingrese su nombre"
-                      pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
-                      autocomplete="off"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      El nombre y apellido es requerido.
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="contact-mail"
-                    class="col-form-label col-sm-2 text-white"
-                    >Correo</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="contact-mail"
-                      placeholder="Ingrese su correo"
-                      pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}"
-                  autocomplete="off"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Por favor ingrese un correo valido.
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="contact-mail"
-                    class="col-form-label col-sm-2 text-white"
-                    >Teléfono</label
-                  >
-                  <div class="col-sm-10 has-validation">
-                    <div class="d-flex input-group">
-                      <span class="input-group-text" id="contact-tel-prefix"
-                        >+56
-                      </span>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="contact-tel"
-                        placeholder="987654321"
-                        pattern="^[0-9]{9}$"
-                    autocomplete="off"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Por favor ingrese un formato telefonico valido.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="contact-name"
-                    class="col-form-label col-sm-2 text-white"
-                    >Motivo</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="contact-subjec"
-                      placeholder="Ingrese el motivo de contacto"
-                      autocomplete="off"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      El motivo es requerido.
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-sm-12">
-                    <textarea
-                      class="form-control"
-                      id="exampleFormControlTextarea1"
-                      rows="3"
-                      maxlength="1500"
-                      minlength="10"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="row mb-3 text-center">
-                  <div class="col-12">
-                    <button
-                      class="btn btn__custom text-uppercase w-50"
-                      type="submit"
-                      id="btn-send"
-                    >
-                      Enviar
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-        <section id="reservations" class="container py-5 my-3 d-none w-75">
-          <div class="d-flex flex-column align-items-center py-4 bg__card rounded-4 container-xl">
-            <h2 class="text-white text-center pb-3">Reserva</h2>
-            <div class=" d-flex justify-content-center">
-              <form
-                class="row g-3 needs-validation justify-content-center bg__form py-3 rounded w-75"
-                novalidate
-                id="form-reservations"
-              >
-                <div class="row my-3">
-                  <label
-                    for="reservation-name"
-                    class="col-form-label col-sm-2 text-white"
-                    >Nombre</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="reservation-name"
-                      placeholder="Ingrese su nombre"
-                      pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
-                      autocomplete="off"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      El nombre y apellido es requerido.
-                    </div>
-                  </div>
-                  <div class="valid-feedback">Looks good!</div>
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="reservation-mail"
-                    class="col-form-label col-sm-2 text-white"
-                    >Correo</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="reservation-mail"
-                      placeholder="Ingrese su correo"
-                      pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}"
-                  autocomplete="off"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Por favor ingrese un correo valido.
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="reservation-tel"
-                    class="col-form-label col-sm-2 text-white"
-                    >Telefono</label
-                  >
-                  <div class="col-sm-10 has-validation">
-                    <div class="d-flex input-group">
-                      <span class="input-group-text" id="reservation-tel-prefix"
-                        >+56
-                      </span>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        id="reservation-tel"
-                        placeholder="987654321"
-                        pattern="^[0-9]{9}$"
-                    autocomplete="off"
-                        required
-                      />
-                      <div class="invalid-feedback">
-                        Por favor ingrese un formato telefonico valido.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="reservation-date"
-                    class="col-form-label col-sm-2 text-white"
-                    >Fecha</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="reservation-date"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      La fecha de reserva es requerida.
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="reservation-time"
-                    class="col-form-label col-sm-2 text-white"
-                    >Hora</label
-                  >
-                  <div class="col-sm-10">
-                    <input
-                      type="time"
-                      class="form-control"
-                      id="reservation-time"
-                      min="15:00"
-                  max="00:00"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      La hora de reserva (15:00 - 00:00).
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="row mb-3">
-                  <label
-                    for="reservation-diners"
-                    class="col-form-label col-sm-6 text-white"
-                    >Cantidad de Asistentes
-                  </label>
-                  <div class="col-sm-6">
-                    <input
-                      type="number"
-                      class="form-control text-center"
-                      id="reservation-diners"
-                      min="1"
-                      max="20"
-                      placeholder="Seleccione numero de asistentes"
-                      required
-                    />
-                    <div class="invalid-feedback">
-                      Se requiere al menos un asistente.
-                    </div>
-                  </div>
-                  
-                </div>
-                <div class="row mb-3 text-center">
-                  <div class="col-12">
-                    <button
-                      class="btn btn__custom text-uppercase w-50"
-                      type="submit"
-                      id="btn-reservation"
-                    >
-                      Reservar
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-      </article>
-      <article>
-        <section id="carousel" class="min-vw-100">
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./assets/img/carousel/chorillana.jpg" class="d-block w-100 object-fit-cover" height="600" alt="Imagen de chorrillana">
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/img/carousel/mojito.jpg" class="d-block w-100 object-fit-cover" height="600" alt="imagen de mojito">
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/img/carousel/vino.jpg" class="d-block w-100 object-fit-cover" height="600" alt="Imagen de vino">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </section>
-      </article>
-    </main>
+      <div class="line__gradient reverse__gradient min-vw-100 position-absolute z-3 top-100"></div>
+    </nav>
+    <div class="bg__hero">
+      <div class="filter">
+        <h6 class="text-center text-uppercase filter__text text__shadow">
+          Pub Restaurant
+        </h6>
+        <h1 class="text-center display-2 filter__text text__shadow" data-text="NIMRODEL">
+          NIMRODEL
+        </h1>
+      </div>
+    </div>
     <div class="line__gradient"></div>
-    <footer class="bg__footer d-flex justify-content-center align-items-center">
-      <div class="h-100">
-        <p class="text-white text-uppercase text-wrap px-2 text-center text__shadow my-5">
-          Todos los derechos reservados
-          <i class="fa-regular fa-registered"></i>
-        </p>
+  </header>
+  <main class="bg__dark">
+    <article class=" px-lg-5 px-xs-3 px-1 pb-5">
+      <section class="container-sm">
+        <h2 class="text-white text-center py-5">Destacados de la semana</h2>
+        <div class="blob__container">
+          <div class="blob"></div>
+        </div>
+        <div class="row row-cols-1 row-cols-lg-3 text-center">
+          <div class="col p-3 bg-transparent rounded" data-card-id="1">
+            <div class="card h-100 bg__card text-white border-0 p-3">
+              <img src="./assets/img/bebidas.jpg" class="card-img-top object-fit-cover rounded" alt="Imagen de gaseosas"
+                height="250" id="img-1" />
+              <div class="card-body">
+                <h5 class="card-title text-uppercase">Gaseosas</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat delectus quod corrupti omnis velit possimus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col p-3 bg-transparent rounded" data-card-id="2">
+            <div class="card h-100 bg__card text-white border-0 p-3">
+              <img src="./assets/img/tablas.jpg" class="card-img-top object-fit-cover rounded" alt="Imagen de comida"
+                height="250" id="img-2" />
+              <div class="card-body">
+                <h5 class="card-title text-uppercase">Tablas</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat delectus quod corrupti omnis velit possimus.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col p-3 bg-transparent rounded" data-card-id="3">
+            <div class="card h-100 bg__card text-white border-0 p-3">
+              <img src="./assets/img/shop.jpeg" class="card-img-top object-fit-cover" alt="Imagen de cervezas"
+                height="250" id="img-3"/>
+              <div class="card-body">
+                <h5 class="card-title text-uppercase">Shop Cerveza</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Fugiat delectus quod corrupti omnis velit possimus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="container py-5 my-3 d-none w-75">
+        <div class="d-flex flex-column align-items-center bg__card py-4 rounded-4 container-xl">
+          <h2 class="text-white text-center pb-3">Comuniquemonos</h2>
+          <div class=" d-flex justify-content-center">
+            <form class="row g-3 needs-validation justify-content-center bg__form py-3 rounded w-75" novalidate
+              id="form-contact">
+              <div class="row my-3">
+                <label for="contact-name" class="col-form-label col-sm-2 text-white">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="contact-name" placeholder="Ingrese su nombre"
+                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" autocomplete="off" required />
+                  <div class="invalid-feedback">
+                    El nombre y apellido es requerido.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="contact-mail" class="col-form-label col-sm-2 text-white">Correo</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="contact-mail" placeholder="Ingrese su correo"
+                    pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" autocomplete="off" required />
+                  <div class="invalid-feedback">
+                    Por favor ingrese un correo valido.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="contact-mail" class="col-form-label col-sm-2 text-white">Teléfono</label>
+                <div class="col-sm-10 has-validation">
+                  <div class="d-flex input-group">
+                    <span class="input-group-text" id="contact-tel-prefix">+56
+                    </span>
+                    <input type="tel" class="form-control" id="contact-tel" placeholder="987654321" pattern="^[0-9]{9}$"
+                      autocomplete="off" required />
+                    <div class="invalid-feedback">
+                      Por favor ingrese un formato telefónico valido.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="contact-name" class="col-form-label col-sm-2 text-white">Motivo</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="contact-subjec"
+                    placeholder="Ingrese el motivo de contacto" autocomplete="off" required />
+                  <div class="invalid-feedback">
+                    El motivo es requerido.
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-sm-12">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" maxlength="1500"
+                    minlength="10"></textarea>
+                </div>
+              </div>
+              <div class="row mb-3 text-center">
+                <div class="col-12">
+                  <button class="btn btn__custom text-uppercase w-50" type="submit" id="btn-send">
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="reservations" class="container py-5 my-3 d-none w-75">
+        <div class="d-flex flex-column align-items-center py-4 bg__card rounded-4 container-xl">
+          <h2 class="text-white text-center pb-3">Reserva</h2>
+          <div class=" d-flex justify-content-center">
+            <form class="row g-3 needs-validation justify-content-center bg__form py-3 rounded w-75" novalidate
+              id="form-reservations">
+              <div class="row my-3">
+                <label for="reservation-name" class="col-form-label col-sm-2 text-white">Nombre</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="reservation-name" placeholder="Ingrese su nombre"
+                    pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" autocomplete="off" required />
+                  <div class="invalid-feedback">
+                    El nombre y apellido es requerido.
+                  </div>
+                </div>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="row mb-3">
+                <label for="reservation-mail" class="col-form-label col-sm-2 text-white">Correo</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="reservation-mail" placeholder="Ingrese su correo"
+                    pattern="[a-z0-9.+-_]+@[a-z]+\.[a-z]{2,3}" autocomplete="off" required />
+                  <div class="invalid-feedback">
+                    Por favor ingrese un correo valido.
+                  </div>
+                </div>
+
+              </div>
+              <div class="row mb-3">
+                <label for="reservation-tel" class="col-form-label col-sm-2 text-white">Teléfono</label>
+                <div class="col-sm-10 has-validation">
+                  <div class="d-flex input-group">
+                    <span class="input-group-text" id="reservation-tel-prefix">+56
+                    </span>
+                    <input type="tel" class="form-control" id="reservation-tel" placeholder="987654321"
+                      pattern="^[0-9]{9}$" autocomplete="off" required />
+                    <div class="invalid-feedback">
+                      Por favor ingrese un formato telefónico valido.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="reservation-date" class="col-form-label col-sm-2 text-white">Fecha</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="reservation-date" required />
+                  <div class="invalid-feedback">
+                    La fecha de reserva es requerida.
+                  </div>
+                </div>
+
+              </div>
+              <div class="row mb-3">
+                <label for="reservation-time" class="col-form-label col-sm-2 text-white">Hora</label>
+                <div class="col-sm-10">
+                  <input type="time" class="form-control" id="reservation-time" min="15:00" max="00:00" required />
+                  <div class="invalid-feedback">
+                    La hora de reserva (15:00 - 00:00).
+                  </div>
+                </div>
+
+              </div>
+              <div class="row mb-3">
+                <label for="reservation-diners" class="col-form-label col-sm-6 text-white">Cantidad de Asistentes
+                </label>
+                <div class="col-sm-6">
+                  <input type="number" class="form-control text-center" id="reservation-diners" min="1" max="20"
+                    placeholder="Seleccione numero de asistentes" required />
+                  <div class="invalid-feedback">
+                    Se requiere al menos un asistente.
+                  </div>
+                </div>
+
+              </div>
+              <div class="row mb-3 text-center">
+                <div class="col-12">
+                  <button class="btn btn__custom text-uppercase w-50" type="submit" id="btn-reservation">
+                    Reservar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </article>
+    <article>
+      <section id="carousel" class="min-vw-100">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/img/carousel/chorillana.jpg" class="d-block w-100 object-fit-cover" height="600"
+                alt="Imagen de chorrillana">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/carousel/mojito.jpg" class="d-block w-100 object-fit-cover" height="600"
+                alt="imagen de mojito">
+            </div>
+            <div class="carousel-item">
+              <img src="./assets/img/carousel/vino.jpg" class="d-block w-100 object-fit-cover" height="600"
+                alt="Imagen de vino">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+    </article>
+  </main>
+  <div class="line__gradient"></div>
+  <footer class="bg__footer d-flex justify-content-center align-items-center">
+    <div class="h-100">
+      <p class="text-white text-uppercase text-wrap px-2 text-center text__shadow my-5">
+        Todos los derechos reservados
+        <i class="fa-regular fa-registered"></i>
+      </p>
+    </div>
+  </footer>
+  <div class="modal fade modal-lg" id="cardModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered bg-transparent" role="document">
+      <div class="modal-content bg__card pb-4">
+        <div class="modal-header" data-bs-theme="dark">
+          <h5 class="modal-title text-center text-uppercase text-light w-100"></h5>
+          <button type="button" class="btn-close close" data-dismiss="modal" aria-label="Close">
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="text-center text-light"></p>
+          <img src="" alt="" height="250" class="rounded-3 object-fit-cover w-100">
+        </div>
       </div>
-    </footer> 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./scripts/index.js"></script>
+    </div>
+  </div>
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./scripts/index.js"></script>
   </body>
+
 </html>

@@ -6,6 +6,26 @@ btnBurger.addEventListener('click', function () {
   iconToggle.classList.toggle('fa-drumstick-bite');
 });
 
+//MODAL CARD
+$('.card').on('click', function () {
+  const $modal = $('#cardModal');
+  const $card = $(this);
+
+  const title = $card.find('.card-title').text();
+  const text = $card.find('.card-text').text();
+  const imgUrl = $card.find('img').attr('src');
+
+  $modal.find('.modal-title').text(title);
+  $modal.find('.modal-body p').text(text);
+  $modal.find('.modal-body img').attr('src', imgUrl);
+
+  $modal.modal('show');
+});
+$('.modal-header .close').on('click', function () {
+  const $modal = $(this).closest('.modal');
+  $modal.modal('hide');
+});
+
 //FORM SHOW
 const contactLink = document.getElementById('contact-link');
 const contactForm = document.getElementById('contact');
@@ -35,42 +55,44 @@ reservationHour.value = date.toLocaleTimeString('es-CL', {
 //VALIDATE FORM
 (() => {
   'use strict';
-  const forms = document.querySelectorAll('.needs-validation');
 
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      'submit',
-      (event) => {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
+  // Validación de formulario de contacto
+  const formContact = $('#form-contact');
+  formContact.on('submit', (event) => {
+    if (!formContact[0].checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    formContact.addClass('was-validated');
+    if (formContact[0].checkValidity()) {
+      event.preventDefault();
+      const name = $('#contact-name').val();
+      const email = $('#contact-mail').val();
+      alert(
+        `Muchas gracias ${name} hemos recibido su sugerencia y\nenviaremos una pronta respuesta al correo ${email}`
+      );
+      location.reload();
+    }
+  });
 
-        const formContact = document.getElementById('form-contact');
-        const formReservations = document.getElementById('form-reservations');
-        const alertMessage = (name, mail) => {
-          alert(
-            `Muchas gracias ${name} hemos recibido su sugerencia y\nenviaremos una pronta respuesta al correo ${mail}`
-          );
-          location.reload();
-        };
-
-        if (form === formContact && form.checkValidity()) {
-          event.preventDefault();
-          const name = document.getElementById('contact-name').value;
-          const email = document.getElementById('contact-mail').value;
-          alertMessage(name, email);
-        }
-        if (form === formReservations && form.checkValidity()) {
-          event.preventDefault();
-          const name = document.getElementById('reservation-name').value;
-          const email = document.getElementById('reservation-mail').value;
-          alertMessage(name, email);
-        }
-      },
-      false
-    );
+  // Validación de formulario de reservaciones
+  const formReservations = $('#form-reservations');
+  formReservations.on('submit', (event) => {
+    if (!formReservations[0].checkValidity()) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    formReservations.addClass('was-validated');
+    if (formReservations[0].checkValidity()) {
+      event.preventDefault();
+      const name = $('#reservation-name').val();
+      const email = $('#reservation-mail').val();
+      const diners = $('#reservation-diners').val();
+      alert(
+        `Estimado/a ${name} agradecemos por reservar con nosotros.\nHemos registrado ${diners} asistentes. Se ha enviado el código de confirmación al correo ${email}\nGracias por preferirnos`
+      );
+      location.reload();
+    }
   });
 })();
 
