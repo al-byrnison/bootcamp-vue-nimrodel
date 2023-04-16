@@ -42,13 +42,36 @@ reservationHour.value = date.toLocaleTimeString('es-CL', {
       'submit',
       (event) => {
         if (!form.checkValidity()) {
-          alert('Debe completar los campos');
           event.preventDefault();
           event.stopPropagation();
         }
         form.classList.add('was-validated');
+
+        const formContact = document.getElementById('form-contact');
+        const formReservations = document.getElementById('form-reservations');
+        const alertMessage = (name, mail) => {
+          alert(
+            `Muchas gracias ${name} hemos recibido su sugerencia y\nenviaremos una pronta respuesta al correo ${mail}`
+          );
+          location.reload();
+        };
+
+        if (form === formContact && form.checkValidity()) {
+          event.preventDefault();
+          const name = document.getElementById('contact-name').value;
+          const email = document.getElementById('contact-mail').value;
+          alertMessage(name, email);
+        }
+        if (form === formReservations && form.checkValidity()) {
+          event.preventDefault();
+          const name = document.getElementById('reservation-name').value;
+          const email = document.getElementById('reservation-mail').value;
+          alertMessage(name, email);
+        }
       },
       false
     );
   });
 })();
+
+//SUBMIT
